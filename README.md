@@ -3,6 +3,7 @@
 Deployment-ready Next.js project configured for:
 - GitHub source control + CI
 - Dokploy production deployment
+- Vercel deployment
 
 ## Local Run
 
@@ -71,3 +72,21 @@ Workflow file: `.github/workflows/dokploy-deploy.yml`
    - `DOKPLOY_DEPLOY_HOOK_URL`
 3. Push to `main` (or run the workflow manually) to trigger deploy.
 
+## Vercel Setup
+
+This repo is also ready for Vercel.
+
+### One-time setup
+1. In Vercel, click **Add New Project** and import this GitHub repository.
+2. Framework preset: **Next.js** (auto-detected).
+3. Keep default root directory (`./`).
+4. Deploy.
+
+### Important compatibility note
+- `next.config.js` uses `standalone` output for Dokploy builds.
+- On Vercel, that setting is automatically disabled using `process.env.VERCEL`, so both platforms work from the same branch.
+
+### Optional production domain
+1. Open your Vercel project settings.
+2. Add your custom domain.
+3. Update DNS records as instructed by Vercel.
