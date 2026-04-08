@@ -297,13 +297,17 @@ function AwardsSection() {
             <div
               className={`${styles.awardLogoWrap} ${award.logoTheme === 'inverse' ? styles.awardLogoWrapInverse : ''}`}
             >
-              <Image
-                src={award.logo}
-                alt={award.name}
-                fill
-                sizes="(max-width: 820px) 72vw, (max-width: 1100px) 44vw, 22vw"
-                className={styles.awardLogoImage}
-              />
+              <div
+                className={`${styles.awardLogoFrame} ${award.logoTheme === 'inverse' ? styles.awardLogoFrameInverse : ''}`}
+              >
+                <Image
+                  src={award.logo}
+                  alt={award.name}
+                  fill
+                  sizes="(max-width: 820px) 72vw, (max-width: 1100px) 44vw, 22vw"
+                  className={styles.awardLogoImage}
+                />
+              </div>
             </div>
             <strong>{award.name}</strong>
             <span>{award.note}</span>
