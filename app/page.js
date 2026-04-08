@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from '@/components/home/HomePage.module.css';
+import PrimaryNav from '@/components/home/PrimaryNav';
 import {
   awards,
   experienceStats,
@@ -18,49 +19,6 @@ function SectionIntro({ eyebrow, title, body, align = 'left' }) {
       <h2>{title}</h2>
       <p>{body}</p>
     </div>
-  );
-}
-
-function PrimaryNav() {
-  const links = [
-    { label: 'Menu', href: '#menu' },
-    { label: 'Locations', href: '#locations' },
-    { label: 'Story', href: '#story' },
-    { label: 'Reviews', href: '#reviews' }
-  ];
-
-  return (
-    <header className={styles.header}>
-      <div className={styles.brandRow}>
-        <a href="#top" className={styles.wordmark} aria-label="The Duke's home">
-          <Image
-            src={siteMeta.navLogo}
-            alt="The Duke's logo"
-            width={208}
-            height={86}
-            priority
-            className={styles.navLogo}
-          />
-        </a>
-
-        <nav className={styles.nav}>
-          {links.map((link) => (
-            <a key={link.label} href={link.href}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className={styles.headerActions}>
-          <a className={styles.secondaryButton} href={siteMeta.orderUrl} target="_blank" rel="noreferrer">
-            Order Pickup
-          </a>
-          <a className={styles.primaryButton} href="#locations">
-            Get Directions
-          </a>
-        </div>
-      </div>
-    </header>
   );
 }
 
@@ -428,22 +386,10 @@ function ClosingCta() {
   );
 }
 
-function MobileDock() {
-  return (
-    <div className={styles.mobileDock}>
-      <a href="#locations">Directions</a>
-      <a href="#menu">Menu</a>
-      <a href={siteMeta.orderUrl} target="_blank" rel="noreferrer">
-        Pickup
-      </a>
-    </div>
-  );
-}
-
 export default function HomePage() {
   return (
     <main className={styles.pageShell}>
-      <PrimaryNav />
+      <PrimaryNav navLogo={siteMeta.navLogo} orderUrl={siteMeta.orderUrl} />
       <Hero />
       <StatsStrip />
       <FeaturedCategories />
@@ -453,7 +399,6 @@ export default function HomePage() {
       <ReviewsSection />
       <LocationsSection />
       <ClosingCta />
-      <MobileDock />
     </main>
   );
 }
