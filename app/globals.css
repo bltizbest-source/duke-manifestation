@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fbf4ea;
+  color: #32251d;
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  overflow-x: clip;
+}
+
+img {
+  display: block;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
