@@ -386,6 +386,70 @@ function ClosingCta() {
   );
 }
 
+function SiteFooter() {
+  const quickLinks = [
+    { label: 'Menu', href: '#menu' },
+    { label: 'Locations', href: '#locations' },
+    { label: 'Story', href: '#story' },
+    { label: 'Reviews', href: '#reviews' }
+  ];
+
+  const primaryLocation = locations[0];
+
+  return (
+    <footer className={styles.siteFooter}>
+      <div className={styles.footerInner}>
+        <div className={styles.footerBrand}>
+          <a href="#top" className={styles.footerLogoLink} aria-label="Back to top">
+            <Image src={siteMeta.navLogo} alt="The Duke's logo" width={184} height={76} className={styles.footerLogo} />
+          </a>
+          <p>
+            American comfort classics in Chiang Mai with dine-in, pickup, and delivery kept easy
+            across all branches.
+          </p>
+        </div>
+
+        <div className={styles.footerColumn}>
+          <h3>Explore</h3>
+          <nav className={styles.footerNav} aria-label="Footer links">
+            {quickLinks.map((link) => (
+              <a key={link.label} className={styles.footerLink} href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        <div className={styles.footerColumn}>
+          <h3>Contact</h3>
+          <a className={styles.footerLink} href={siteMeta.mapsFallback} target="_blank" rel="noreferrer">
+            Open in Google Maps
+          </a>
+          {primaryLocation ? (
+            <a className={styles.footerLink} href={`tel:${primaryLocation.phoneRaw}`}>
+              {primaryLocation.phoneDisplay}
+            </a>
+          ) : null}
+          <a className={styles.footerLink} href={siteMeta.instagramUrl} target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+        </div>
+
+        <div className={styles.footerColumn}>
+          <h3>Order</h3>
+          <a className={styles.primaryButton} href={siteMeta.orderUrl} target="_blank" rel="noreferrer">
+            Order Pickup
+          </a>
+        </div>
+      </div>
+
+      <div className={styles.footerLegal}>
+        <p>&copy; {new Date().getFullYear()} The Duke&apos;s Chiang Mai. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+}
+
 export default function HomePage() {
   return (
     <main className={styles.pageShell}>
@@ -399,6 +463,7 @@ export default function HomePage() {
       <ReviewsSection />
       <LocationsSection />
       <ClosingCta />
+      <SiteFooter />
     </main>
   );
 }
