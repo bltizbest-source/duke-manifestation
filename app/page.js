@@ -294,8 +294,16 @@ function AwardsSection() {
             target="_blank"
             rel="noreferrer"
           >
-            <div className={styles.awardLogoWrap}>
-              <Image src={award.logo} alt={award.name} width={120} height={72} />
+            <div
+              className={`${styles.awardLogoWrap} ${award.logoTheme === 'inverse' ? styles.awardLogoWrapInverse : ''}`}
+            >
+              <Image
+                src={award.logo}
+                alt={award.name}
+                fill
+                sizes="(max-width: 820px) 72vw, (max-width: 1100px) 44vw, 22vw"
+                className={styles.awardLogoImage}
+              />
             </div>
             <strong>{award.name}</strong>
             <span>{award.note}</span>

@@ -642,15 +642,27 @@
   color: inherit;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .awardLogoWrap {
-  min-height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  min-height: 86px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(252, 250, 247, 0.95);
+  border: 1px solid rgba(74, 52, 37, 0.08);
   overflow: hidden;
+}
+
+.awardLogoWrapInverse {
+  background: linear-gradient(180deg, #2c231d 0%, #1c1511 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.awardLogoImage {
+  object-fit: contain;
+  object-position: center;
 }
 
 .awardCard strong {
