@@ -576,8 +576,7 @@
   min-height: 600px;
 }
 
-.storyImageLarge,
-.storyImageSmall {
+.storyImageLarge {
   position: absolute;
   overflow: hidden;
   border-radius: 28px;
@@ -585,22 +584,11 @@
 }
 
 .storyImageLarge {
-  inset: 0 80px 0 0;
-}
-
-.storyImageSmall {
-  width: 44%;
-  right: 0;
-  bottom: 48px;
-  top: 120px;
+  inset: 0;
 }
 
 .storyImageLarge .storyImage {
   object-position: center 42%;
-}
-
-.storyImageSmall .storyImage {
-  object-position: center 38%;
 }
 
 .storyCopy {
@@ -1081,13 +1069,7 @@
   }
 
   .storyImageLarge {
-    inset: 0 32px 0 0;
-  }
-
-  .storyImageSmall {
-    width: 48%;
-    top: auto;
-    height: 52%;
+    inset: 0;
   }
 
   .locationCard {

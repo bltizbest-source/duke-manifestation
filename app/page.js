@@ -204,15 +204,6 @@ function StorySection() {
               className={styles.storyImage}
             />
           </div>
-          <div className={styles.storyImageSmall}>
-            <Image
-              src={siteMeta.storyImageSecondary}
-              alt="Stacked gourmet burger from The Duke's"
-              fill
-              sizes="(max-width: 900px) 60vw, 28vw"
-              className={styles.storyImage}
-            />
-          </div>
         </div>
 
         <div className={styles.storyCopy}>
