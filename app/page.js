@@ -157,10 +157,10 @@ function FeaturedCategories() {
       <section className={styles.section} id="menu">
         <div className={styles.sectionInner}>
           <SectionIntro
-            eyebrow="Signature menu"
-            title="Built for cravings that deserve more than a quick bite."
-            body="The current brand already has the right strengths: scale, variety, freshness, and made-from-scratch credibility. The redesign makes those strengths feel premium and irresistible."
-          />
+          eyebrow="Signature menu"
+          title="Fresh, Hearty, and Scratch-Made Daily"
+          body="Sauces, breads, soups, dressings, and cakes are created in-house every day using the best local and imported ingredients."
+        />
 
         <div className={styles.categoryGrid}>
           {featuredCategories.map((item) => (
@@ -209,23 +209,23 @@ function StorySection() {
         <div className={styles.storyCopy}>
           <SectionIntro
             eyebrow="Brand story"
-            title="Not a themed tourist stop. A real American institution locals trust."
-            body="The strongest repositioning move is to elevate The Duke's from 'western food option' to 'the place in Chiang Mai for a proper American meal.' That means leaning into legacy, abundance, and made-daily craft without losing warmth."
+            title="Down-to-Earth Scratch Cooking Since 2005"
+            body="We've always made our food fresh and cooked to order, using high-quality local and imported ingredients even before it became a trend."
           />
 
           <div className={styles.storyPoints}>
             <div>
-              <strong>Scratch-made, every day</strong>
-              <p>Sauces, breads, soups, dressings, and cakes are still made in-house, just as they have been for years.</p>
-            </div>
+            <strong>Scratch-made, every day</strong>
+            <p>Chiang Mai’s original scratch kitchen since 2005. We still create our own homemade sauces, breads, soups, dressings, and cakes every day.</p>
+          </div>
             <div>
-              <strong>Comfort with standards</strong>
-              <p>Imported steaks, natural ingredients, cook-to-order pizza, and hearty portions signal quality before the first bite lands.</p>
-            </div>
+            <strong>Comfort with standards</strong>
+            <p>Imported steaks, natural ingredients, and hearty portions—The Duke himself loves a fresh salad with homemade dressing—signal quality from the first bite.</p>
+          </div>
             <div>
-              <strong>Designed for locals and travelers</strong>
-              <p>Fast directional choices, branch discovery, and delivery paths reduce friction for both returning regulars and first-time visitors.</p>
-            </div>
+            <strong>Designed for locals and travelers</strong>
+            <p>Branch discovery and delivery paths via Meals on Wheels 4U—Chiang Mai’s only locally owned delivery service—reduce friction for everyone.</p>
+          </div>
           </div>
         </div>
       </div>
@@ -239,8 +239,8 @@ function MenuMoments() {
       <div className={styles.sectionInner}>
         <SectionIntro
         eyebrow="Menu engagement"
-        title="Make the menu feel like a decision you want to keep scrolling."
-        body="Instead of dumping page images in a long stack, the redesign curates the most profitable appetite triggers first and uses the full menu as a deeper browse path."
+        title="Food First. Great Food and Lots of It."
+        body="Try The Duke’s yourself and learn why customers who want great western food in Chiang Mai keep coming back again and again."
         align="center"
       />
 
@@ -278,8 +278,8 @@ function AwardsSection() {
       <div className={styles.sectionInner}>
         <SectionIntro
         eyebrow="Proof"
-        title="Recognition matters more when it supports a stronger first impression."
-        body="The current site has useful trust assets, but they are visually buried. Here they become a concise credibility band between appetite and action."
+        title="Chiang Mai's Favorite American Institution"
+        body="The Duke's has served over a million meals and won multiple awards for our steaks, ribs, and service since 2005."
       />
 
       <div className={styles.awardsGrid}>
@@ -385,8 +385,8 @@ function ClosingCta() {
         <p className={styles.eyebrow}>Conversion close</p>
         <h2>The fastest way to win dinner is to make the next action obvious.</h2>
         <p>
-          Whether someone wants directions, a menu preview, pickup, or delivery, the redesigned
-          homepage answers the intent within a few seconds and keeps appetite front and center.
+          Whether someone wants directions, a menu preview, or the latest monthly burger specials on Facebook, the redesigned
+          homepage answers the intent within a few seconds.
         </p>
         <div className={styles.heroActions}>
           <a className={styles.primaryButton} href={siteMeta.orderUrl} target="_blank" rel="noreferrer">
@@ -420,8 +420,7 @@ function SiteFooter() {
             <Image src={siteMeta.navLogo} alt="The Duke's logo" width={184} height={76} className={styles.footerLogo} />
           </a>
           <p>
-            American comfort classics in Chiang Mai with dine-in, pickup, and delivery kept easy
-            across all branches.
+            American comfort classics in Chiang Mai since 2005. Support locally owned delivery via Meals on Wheels 4U.
           </p>
         </div>
 
@@ -449,6 +448,9 @@ function SiteFooter() {
           <a className={styles.footerLink} href={siteMeta.instagramUrl} target="_blank" rel="noreferrer">
             Instagram
           </a>
+          <a className={styles.footerLink} href="https://www.facebook.com/thedukeschiangmai/" target="_blank" rel="noreferrer">
+            Facebook (Burger Specials)
+          </a>
         </div>
 
         <div className={styles.footerColumn}>
@@ -461,6 +463,9 @@ function SiteFooter() {
 
       <div className={styles.footerLegal}>
         <p>&copy; {new Date().getFullYear()} The Duke&apos;s Chiang Mai. All rights reserved.</p>
+        <p className={styles.attribution}>
+          by <a href="https://digitalchili.id" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>digital chili</a>
+        </p>
       </div>
     </footer>
   );
