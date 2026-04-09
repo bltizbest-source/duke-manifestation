@@ -198,7 +198,7 @@ function StorySection() {
           <div className={styles.storyImageLarge}>
             <Image
               src={siteMeta.storyImagePrimary}
-              alt="Close-up ribs plate from The Duke's"
+              alt="Gourmet American bacon cheeseburger and fries"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
               className={styles.storyImage}
