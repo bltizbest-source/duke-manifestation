@@ -464,7 +464,7 @@ function SiteFooter() {
       <div className={styles.footerLegal}>
         <p>&copy; {new Date().getFullYear()} The Duke&apos;s Chiang Mai. All rights reserved.</p>
         <p className={styles.attribution}>
-          by <a href="https://digitalchili.id" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>digital chili</a>
+          by <a href="https://digitalchili.co.th/" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>digital chili</a>
         </p>
       </div>
     </footer>
